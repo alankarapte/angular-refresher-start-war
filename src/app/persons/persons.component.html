@@ -1,0 +1,14 @@
+<p *ngIf="isFetching">data is loading...</p>
+
+<div *ngIf="!isFetching">
+  <p>Tip: click to remove!</p>
+  <ul>
+    <li
+      *ngFor="let person of personList"
+      (click)="removePerson(person)"
+      style="cursor: pointer"
+    >
+      {{ person }}
+    </li>
+  </ul>
+</div>
